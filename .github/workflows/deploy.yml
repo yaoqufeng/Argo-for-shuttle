@@ -29,11 +29,11 @@ jobs:
 
       - name: Create Shuttle.toml
         run: |
-          echo 'name = "shuttle-app"' > Shuttle.toml
+          echo 'name = "helloworld"' > Shuttle.toml
 
       - name: Deploy to Shuttle
         env:
           SHUTTLE_API_KEY: ${{ secrets.SHUTTLE_API_KEY }}
         run: |
-          cargo shuttle project create --name shuttle-app
-          cargo shuttle deploy --name shuttle-app
+          cargo shuttle project create --name helloworld
+          cargo shuttle deploy --name helloworld
